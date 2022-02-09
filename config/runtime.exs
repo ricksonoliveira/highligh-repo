@@ -25,7 +25,7 @@ if config_env() == :prod do
   config :highlight_repo, HighlightRepo.Repo,
     # ssl: true,
     url: database_url,
-    pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10"),
+    pool_size: String.to_integer(System.get_env("POOL_SIZE") || "2"),
     socket_options: maybe_ipv6
 
   # The secret key base is used to sign/encrypt cookies and other secrets.
@@ -54,6 +54,9 @@ if config_env() == :prod do
       port: port
     ],
     secret_key_base: secret_key_base
+
+  config :highlight_repo, HighlightRepoWeb.Endpoint, server: true
+  end
 
   # ## Using releases
   #
