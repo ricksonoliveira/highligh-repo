@@ -56,7 +56,6 @@ if config_env() == :prod do
     secret_key_base: secret_key_base
 
   config :highlight_repo, HighlightRepoWeb.Endpoint, server: true
-  end
 
   # ## Using releases
   #
