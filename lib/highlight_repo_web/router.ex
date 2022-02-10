@@ -12,6 +12,8 @@ defmodule HighlightRepoWeb.Router do
 
   pipeline :api do
     plug :accepts, ["json"]
+
+    post "/repos/{language}", RepoController, :highlighted_repos
   end
 
   scope "/", HighlightRepoWeb do
