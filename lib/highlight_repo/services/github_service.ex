@@ -14,6 +14,7 @@ defmodule HighlightRepo.Services.GithubService do
     Jason.decode(response.body)
   end
 
+  @spec get_repos_by_language(any) :: any
   def get_repos_by_language(language) do
     {:ok, repos} = call_github_api(language)
     repos["items"]
