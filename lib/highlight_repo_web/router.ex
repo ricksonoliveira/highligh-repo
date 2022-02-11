@@ -1,5 +1,6 @@
 defmodule HighlightRepoWeb.Router do
   use HighlightRepoWeb, :router
+  alias HighlightRepoWeb.RepoController
 
   pipeline :browser do
     plug :accepts, ["html"]

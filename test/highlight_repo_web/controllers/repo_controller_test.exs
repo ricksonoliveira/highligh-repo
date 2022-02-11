@@ -8,6 +8,6 @@ RepoControllerTest
     conn =
       conn
       |> post(Routes.repo_path(conn, :highlighted_repos), %{language: "elixir"})
-    assert html_response(conn, 200) =~ ""
+    assert {:ok, response} = conn
   end
 end

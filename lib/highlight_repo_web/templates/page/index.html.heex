@@ -1,9 +1,3 @@
-  <nav>
-    <div class="nav-wrapper">
-      <%= link "Highlighted Git Repos", to: Routes.page_path(@conn, :index), class: "brand-logo center" %>
-    </div>
-  </nav>
-
   <div class="input-field col s12">
     <select id="language" style="display: block;">
       <option value="">Choose your option</option>
@@ -32,7 +26,11 @@
             li.innerHTML = `<li class="collection-item avatar">
               <i class="material-icons circle red">play_arrow</i>
               <span class="title">Repo name</span>
+              <p>${item.url}<p>
               <p>${item.name}<p>
+              <p>${item.details}<p>
+              <p>${item.forks}<p>
+              <p>${item.stars}<p>
               </p>
             </li>`
             document.getElementById('list').appendChild(li)

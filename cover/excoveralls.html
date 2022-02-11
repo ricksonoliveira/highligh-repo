@@ -403,6 +403,17 @@ function find(y) {
           </li>
         
           <li>
+            <span class='cov terrible'>0</span>
+            <a href='#lib/highlight_repo_web/controllers/repo_controller.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo_web/controllers/</span>
+              
+              <span class='basename'>repo_controller.ex</span>
+            </a>
+          </li>
+        
+          <li>
             <span class='cov none'>100</span>
             <a href='#lib/highlight_repo_web/endpoint.ex'>
               
@@ -425,7 +436,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov medium'>50</span>
+            <span class='cov medium'>60</span>
             <a href='#lib/highlight_repo_web/router.ex'>
               
               
@@ -481,11 +492,11 @@ function find(y) {
         
       </div>
 
-      <div id='stats' class='high'>
-        <div class='percentage'>77.8</div>
-        <div class='sloc'>9</div>
-        <div class='hits'>15</div>
-        <div class='misses'>2</div>
+      <div id='stats' class='medium'>
+        <div class='percentage'>72.7</div>
+        <div class='sloc'>11</div>
+        <div class='hits'>20</div>
+        <div class='misses'>3</div>
       </div>
       <div id='files'>
         
@@ -766,6 +777,83 @@ function find(y) {
                         <td class='line'>4</td>
                         <td class='hits'>1</td>
                         <td class='source'>    render(conn, &quot;index.html&quot;)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo_web/controllers/repo_controller.ex'>lib/highlight_repo_web/controllers/repo_controller.ex</h2>
+            <div id='stats' class='terrible'>
+              <div class='percentage'>0</div>
+              <div class='sloc'>1</div>
+              <div class='hits'>0</div>
+              <div class='misses'>1</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepoWeb.RepoController do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use HighlightRepoWeb, :controller</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def highlighted_repos(conn, _params) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>4</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    conn</td>
                       </tr>
                     
                 
@@ -1426,9 +1514,9 @@ function find(y) {
           <div class='file'>
             <h2 id='lib/highlight_repo_web/router.ex'>lib/highlight_repo_web/router.ex</h2>
             <div id='stats' class='medium'>
-              <div class='percentage'>50</div>
-              <div class='sloc'>4</div>
-              <div class='hits'>2</div>
+              <div class='percentage'>60</div>
+              <div class='sloc'>5</div>
+              <div class='hits'>3</div>
               <div class='misses'>2</div>
             </div>
             <table id='source'>
@@ -1556,23 +1644,23 @@ function find(y) {
                       <tr>
                         <td class='line'>14</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>15</td>
-                        <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
+                      <tr class='hit'>
+                        <td class='line'>15</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    post &quot;/repos/{language}&quot;, RepoController, :highlighted_repos</td>
+                      </tr>
+                    
+                
+                  
                       <tr>
                         <td class='line'>16</td>
                         <td class='hits'></td>
-                        <td class='source'>  scope &quot;/&quot;, HighlightRepoWeb do</td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -1580,7 +1668,7 @@ function find(y) {
                       <tr>
                         <td class='line'>17</td>
                         <td class='hits'></td>
-                        <td class='source'>    pipe_through :browser</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1588,13 +1676,29 @@ function find(y) {
                       <tr>
                         <td class='line'>18</td>
                         <td class='hits'></td>
+                        <td class='source'>  scope &quot;/&quot;, HighlightRepoWeb do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'>    pipe_through :browser</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>19</td>
+                        <td class='line'>21</td>
                         <td class='hits'>1</td>
                         <td class='source'>    get &quot;/&quot;, PageController, :index</td>
                       </tr>
@@ -1602,25 +1706,9 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>20</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>21</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
                         <td class='line'>22</td>
                         <td class='hits'></td>
-                        <td class='source'>  # Other scopes may use custom stacks.</td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -1628,7 +1716,7 @@ function find(y) {
                       <tr>
                         <td class='line'>23</td>
                         <td class='hits'></td>
-                        <td class='source'>  # scope &quot;/api&quot;, HighlightRepoWeb do</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1636,7 +1724,7 @@ function find(y) {
                       <tr>
                         <td class='line'>24</td>
                         <td class='hits'></td>
-                        <td class='source'>  #   pipe_through :api</td>
+                        <td class='source'>  # Other scopes may use custom stacks.</td>
                       </tr>
                   
                 
@@ -1644,7 +1732,7 @@ function find(y) {
                       <tr>
                         <td class='line'>25</td>
                         <td class='hits'></td>
-                        <td class='source'>  # end</td>
+                        <td class='source'>  # scope &quot;/api&quot;, HighlightRepoWeb do</td>
                       </tr>
                   
                 
@@ -1652,7 +1740,7 @@ function find(y) {
                       <tr>
                         <td class='line'>26</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  #   pipe_through :api</td>
                       </tr>
                   
                 
@@ -1660,7 +1748,7 @@ function find(y) {
                       <tr>
                         <td class='line'>27</td>
                         <td class='hits'></td>
-                        <td class='source'>  # Enables LiveDashboard only for development</td>
+                        <td class='source'>  # end</td>
                       </tr>
                   
                 
@@ -1668,7 +1756,7 @@ function find(y) {
                       <tr>
                         <td class='line'>28</td>
                         <td class='hits'></td>
-                        <td class='source'>  #</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1676,7 +1764,7 @@ function find(y) {
                       <tr>
                         <td class='line'>29</td>
                         <td class='hits'></td>
-                        <td class='source'>  # If you want to use the LiveDashboard in production, you should put</td>
+                        <td class='source'>  # Enables LiveDashboard only for development</td>
                       </tr>
                   
                 
@@ -1684,7 +1772,7 @@ function find(y) {
                       <tr>
                         <td class='line'>30</td>
                         <td class='hits'></td>
-                        <td class='source'>  # it behind authentication and allow only admins to access it.</td>
+                        <td class='source'>  #</td>
                       </tr>
                   
                 
@@ -1692,7 +1780,7 @@ function find(y) {
                       <tr>
                         <td class='line'>31</td>
                         <td class='hits'></td>
-                        <td class='source'>  # If your application does not have an admins-only section yet,</td>
+                        <td class='source'>  # If you want to use the LiveDashboard in production, you should put</td>
                       </tr>
                   
                 
@@ -1700,7 +1788,7 @@ function find(y) {
                       <tr>
                         <td class='line'>32</td>
                         <td class='hits'></td>
-                        <td class='source'>  # you can use Plug.BasicAuth to set up some basic authentication</td>
+                        <td class='source'>  # it behind authentication and allow only admins to access it.</td>
                       </tr>
                   
                 
@@ -1708,7 +1796,7 @@ function find(y) {
                       <tr>
                         <td class='line'>33</td>
                         <td class='hits'></td>
-                        <td class='source'>  # as long as you are also using SSL (which you should anyway).</td>
+                        <td class='source'>  # If your application does not have an admins-only section yet,</td>
                       </tr>
                   
                 
@@ -1716,7 +1804,7 @@ function find(y) {
                       <tr>
                         <td class='line'>34</td>
                         <td class='hits'></td>
-                        <td class='source'>  if Mix.env() in [:dev, :test] do</td>
+                        <td class='source'>  # you can use Plug.BasicAuth to set up some basic authentication</td>
                       </tr>
                   
                 
@@ -1724,7 +1812,7 @@ function find(y) {
                       <tr>
                         <td class='line'>35</td>
                         <td class='hits'></td>
-                        <td class='source'>    import Phoenix.LiveDashboard.Router</td>
+                        <td class='source'>  # as long as you are also using SSL (which you should anyway).</td>
                       </tr>
                   
                 
@@ -1732,7 +1820,7 @@ function find(y) {
                       <tr>
                         <td class='line'>36</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  if Mix.env() in [:dev, :test] do</td>
                       </tr>
                   
                 
@@ -1740,7 +1828,7 @@ function find(y) {
                       <tr>
                         <td class='line'>37</td>
                         <td class='hits'></td>
-                        <td class='source'>    scope &quot;/&quot; do</td>
+                        <td class='source'>    import Phoenix.LiveDashboard.Router</td>
                       </tr>
                   
                 
@@ -1748,7 +1836,7 @@ function find(y) {
                       <tr>
                         <td class='line'>38</td>
                         <td class='hits'></td>
-                        <td class='source'>      pipe_through :browser</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1756,93 +1844,13 @@ function find(y) {
                       <tr>
                         <td class='line'>39</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>    scope &quot;/&quot; do</td>
                       </tr>
                   
                 
                   
-                      <tr class='miss'>
+                      <tr>
                         <td class='line'>40</td>
-                        <td class='hits'>0</td>
-                        <td class='source'>      live_dashboard &quot;/dashboard&quot;, metrics: HighlightRepoWeb.Telemetry</td>
-                      </tr>
-                    
-                
-                  
-                      <tr>
-                        <td class='line'>41</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>42</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>43</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>44</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Enables the Swoosh mailbox preview in development.</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>45</td>
-                        <td class='hits'></td>
-                        <td class='source'>  #</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>46</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Note that preview only shows emails that were sent by the same</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>47</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # node running the Phoenix server.</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>48</td>
-                        <td class='hits'></td>
-                        <td class='source'>  if Mix.env() == :dev do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>49</td>
-                        <td class='hits'></td>
-                        <td class='source'>    scope &quot;/dev&quot; do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>50</td>
                         <td class='hits'></td>
                         <td class='source'>      pipe_through :browser</td>
                       </tr>
@@ -1850,23 +1858,23 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>51</td>
+                        <td class='line'>41</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
-                      <tr>
-                        <td class='line'>52</td>
-                        <td class='hits'></td>
-                        <td class='source'>      forward &quot;/mailbox&quot;, Plug.Swoosh.MailboxPreview</td>
+                      <tr class='miss'>
+                        <td class='line'>42</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>      live_dashboard &quot;/dashboard&quot;, metrics: HighlightRepoWeb.Telemetry</td>
                       </tr>
-                  
+                    
                 
                   
                       <tr>
-                        <td class='line'>53</td>
+                        <td class='line'>43</td>
                         <td class='hits'></td>
                         <td class='source'>    end</td>
                       </tr>
@@ -1874,7 +1882,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>54</td>
+                        <td class='line'>44</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1882,7 +1890,103 @@ function find(y) {
                 
                   
                       <tr>
+                        <td class='line'>45</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>46</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # Enables the Swoosh mailbox preview in development.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>47</td>
+                        <td class='hits'></td>
+                        <td class='source'>  #</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>48</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # Note that preview only shows emails that were sent by the same</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>49</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # node running the Phoenix server.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>50</td>
+                        <td class='hits'></td>
+                        <td class='source'>  if Mix.env() == :dev do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>51</td>
+                        <td class='hits'></td>
+                        <td class='source'>    scope &quot;/dev&quot; do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>52</td>
+                        <td class='hits'></td>
+                        <td class='source'>      pipe_through :browser</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>53</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>54</td>
+                        <td class='hits'></td>
+                        <td class='source'>      forward &quot;/mailbox&quot;, Plug.Swoosh.MailboxPreview</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
                         <td class='line'>55</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>56</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>57</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1897,7 +2001,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>1</div>
-              <div class='hits'>2</div>
+              <div class='hits'>3</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -2016,7 +2120,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>13</td>
-                        <td class='hits'>2</td>
+                        <td class='hits'>3</td>
                         <td class='source'>    Phoenix.Controller.status_message_from_template(template)</td>
                       </tr>
                     
@@ -2168,7 +2272,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>3</div>
-              <div class='hits'>10</div>
+              <div class='hits'>13</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -2351,7 +2455,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>21</td>
-                        <td class='hits'>4</td>
+                        <td class='hits'>5</td>
                         <td class='source'>  using do</td>
                       </tr>
                     
@@ -2471,7 +2575,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>36</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>4</td>
                         <td class='source'>    pid = Sandbox.start_owner!(HighlightRepo.Repo, shared: not tags[:async])</td>
                       </tr>
                     
@@ -2479,7 +2583,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>37</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>4</td>
                         <td class='source'>    on_exit(fn -&gt; Sandbox.stop_owner(pid) end)</td>
                       </tr>
                     
