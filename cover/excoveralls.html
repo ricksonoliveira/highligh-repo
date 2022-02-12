@@ -370,6 +370,28 @@ function find(y) {
           </li>
         
           <li>
+            <span class='cov medium'>66.7</span>
+            <a href='#lib/highlight_repo/git_repos.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo/</span>
+              
+              <span class='basename'>git_repos.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov medium'>50</span>
+            <a href='#lib/highlight_repo/owners/owner.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo/owners/</span>
+              
+              <span class='basename'>owner.ex</span>
+            </a>
+          </li>
+        
+          <li>
             <span class='cov none'>100</span>
             <a href='#lib/highlight_repo/repo.ex'>
               
@@ -377,6 +399,17 @@ function find(y) {
                 <span class='dirname'>lib/highlight_repo/</span>
               
               <span class='basename'>repo.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>100</span>
+            <a href='#lib/highlight_repo/repos/git_repo.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo/repos/</span>
+              
+              <span class='basename'>git_repo.ex</span>
             </a>
           </li>
         
@@ -504,10 +537,10 @@ function find(y) {
       </div>
 
       <div id='stats' class='high'>
-        <div class='percentage'>86.4</div>
-        <div class='sloc'>22</div>
-        <div class='hits'>41</div>
-        <div class='misses'>3</div>
+        <div class='percentage'>83.9</div>
+        <div class='sloc'>31</div>
+        <div class='hits'>54</div>
+        <div class='misses'>5</div>
       </div>
       <div id='files'>
         
@@ -605,6 +638,480 @@ function find(y) {
           </div>
         
           <div class='file'>
+            <h2 id='lib/highlight_repo/git_repos.ex'>lib/highlight_repo/git_repos.ex</h2>
+            <div id='stats' class='medium'>
+              <div class='percentage'>66.7</div>
+              <div class='sloc'>3</div>
+              <div class='hits'>2</div>
+              <div class='misses'>1</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepo.GitRepos do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  The Repos context.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias HighlightRepo.{Repos.GitRepo, Repo}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Returns the list of repos.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def list_repos do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>11</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    Repo.all(GitRepo)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @spec get_git_repo!(any) :: nil | [%{optional(atom) =&gt; any}] | %{optional(atom) =&gt; any}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Gets a single git_repos.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>18</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>  def get_git_repo!(id), do: Repo.get!(GitRepo, id) |&gt; Repo.preload(:owner)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @spec create_git_repo_with_owner(</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>21</td>
+                        <td class='hits'></td>
+                        <td class='source'>          :invalid | %{optional(:__struct__) =&gt; none, optional(atom | binary) =&gt; any},</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'>          any</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>        ) :: any</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>24</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>25</td>
+                        <td class='hits'></td>
+                        <td class='source'>  Creates a git_repos.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>26</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>27</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def create_git_repo_with_owner(attrs \\ %{}, owner) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>28</td>
+                        <td class='hits'></td>
+                        <td class='source'>    %GitRepo{}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>29</td>
+                        <td class='hits'></td>
+                        <td class='source'>      |&gt; GitRepo.changeset(attrs)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>30</td>
+                        <td class='hits'></td>
+                        <td class='source'>      |&gt; Ecto.Changeset.put_assoc(:owner, owner)</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>31</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      |&gt; Repo.insert()</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>32</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>33</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo/owners/owner.ex'>lib/highlight_repo/owners/owner.ex</h2>
+            <div id='stats' class='medium'>
+              <div class='percentage'>50</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>2</div>
+              <div class='misses'>1</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepo.Owners.Owner do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use Ecto.Schema</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Ecto.Changeset</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>4</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>  schema &quot;owners&quot; do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :avatar_url, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :name, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :url, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>    has_many :repos, HighlightRepo.Repos.GitRepo</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>    timestamps()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc false</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def changeset(owner, attrs) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>    owner</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; cast(attrs, [:name, :avatar_url, :url])</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>17</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    |&gt; validate_required([:name, :avatar_url, :url])</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
             <h2 id='lib/highlight_repo/repo.ex'>lib/highlight_repo/repo.ex</h2>
             <div id='stats' class='none'>
               <div class='percentage'>100</div>
@@ -656,6 +1163,203 @@ function find(y) {
                   
                       <tr>
                         <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo/repos/git_repo.ex'>lib/highlight_repo/repos/git_repo.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>7</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepo.Repos.GitRepo do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use Ecto.Schema</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  import Ecto.Changeset</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>4</td>
+                        <td class='hits'>6</td>
+                        <td class='source'>  schema &quot;repos&quot; do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :description, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :forks, :integer</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :name, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :stars, :integer</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>    field :url, :string</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>    belongs_to :owner, HighlightRepo.Owners.Owner</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>    timestamps()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @doc false</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def changeset(git_repos, attrs) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>    git_repos</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>    |&gt; cast(attrs, [:name, :description, :forks, :stars, :url])</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>19</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    |&gt; validate_required([:name, :description, :forks, :stars, :url])</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>21</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -859,24 +1563,40 @@ function find(y) {
                     
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>22</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>      {:error, message} -&gt; message</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
                         <td class='line'>23</td>
                         <td class='hits'></td>
-                        <td class='source'>      end</td>
+                        <td class='source'>      {:error, message} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>24</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        message</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>25</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
                       </tr>
                   
                 
                   
                       <tr>
-                        <td class='line'>24</td>
+                        <td class='line'>26</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -884,7 +1604,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>25</td>
+                        <td class='line'>27</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -898,8 +1618,8 @@ function find(y) {
             <h2 id='lib/highlight_repo/services/repo_service.ex'>lib/highlight_repo/services/repo_service.ex</h2>
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
-              <div class='sloc'>2</div>
-              <div class='hits'>2</div>
+              <div class='sloc'>4</div>
+              <div class='hits'>4</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -947,7 +1667,7 @@ function find(y) {
                       <tr>
                         <td class='line'>4</td>
                         <td class='hits'></td>
-                        <td class='source'>  alias HighlightRepo.Services.GithubService</td>
+                        <td class='source'>  alias HighlightRepo.{Services.GithubService, GitRepos}</td>
                       </tr>
                   
                 
@@ -979,21 +1699,157 @@ function find(y) {
                       <tr class='hit'>
                         <td class='line'>8</td>
                         <td class='hits'>1</td>
-                        <td class='source'>    response = GithubService.get_repos_by_language(language)</td>
-                      </tr>
-                    
-                
-                  
-                      <tr class='hit'>
-                        <td class='line'>9</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>    response</td>
+                        <td class='source'>     response = GithubService.get_repos_by_language(language)</td>
                       </tr>
                     
                 
                   
                       <tr>
+                        <td class='line'>9</td>
+                        <td class='hits'></td>
+                        <td class='source'>     |&gt; (Enum.map (fn repo -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
                         <td class='line'>10</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        owner = repo[&quot;owner&quot;]</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>11</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>        GitRepos.create_git_repo_with_owner(</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'>          %{</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'>            name: repo[&quot;full_name&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>            description: repo[&quot;description&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>            forks: repo[&quot;forks&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'>            stars: repo[&quot;stargazers_count&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>            url: repo[&quot;html_url&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>          },</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>19</td>
+                        <td class='hits'></td>
+                        <td class='source'>          %{</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>            avatar_url: owner[&quot;avatar_url&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>21</td>
+                        <td class='hits'></td>
+                        <td class='source'>            name: owner[&quot;login&quot;],</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>22</td>
+                        <td class='hits'></td>
+                        <td class='source'>            url: owner[&quot;html_url&quot;]</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>          })</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>24</td>
+                        <td class='hits'></td>
+                        <td class='source'>     end))</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>25</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>26</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>     response</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>27</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1001,7 +1857,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>11</td>
+                        <td class='line'>28</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
