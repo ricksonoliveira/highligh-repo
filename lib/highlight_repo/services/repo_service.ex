@@ -1,7 +1,7 @@
 defmodule HighlightRepo.Services.RepoService do
-@moduledoc """
-RepoService
-"""
+  @moduledoc """
+  RepoService
+  """
   alias HighlightRepo.Services.GithubService
 
   @spec repos_info(any) :: any

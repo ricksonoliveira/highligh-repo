@@ -1,7 +1,7 @@
 defmodule HighlightRepoWeb.PageControllerTest do
-@moduledoc """
-PageControllerTest
-"""
+  @moduledoc """
+  PageControllerTest
+  """
   use HighlightRepoWeb.ConnCase
 
   test "GET /", %{conn: conn} do
