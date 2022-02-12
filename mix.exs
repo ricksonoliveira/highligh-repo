@@ -59,8 +59,7 @@ defmodule HighlightRepo.MixProject do
       {:plug_cowboy, "~> 2.5"},
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:excoveralls, "~> 0.10", only: :test},
-      {:httpoison, "~> 1.8"},
-      {:mock, "~> 0.3.0", only: :test}
+      {:httpoison, "~> 1.8"}
     ]
   end
 
