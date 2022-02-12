@@ -371,17 +371,6 @@ function find(y) {
         
           <li>
             <span class='cov none'>100</span>
-            <a href='#lib/highlight_repo/mailer.ex'>
-              
-              
-                <span class='dirname'>lib/highlight_repo/</span>
-              
-              <span class='basename'>mailer.ex</span>
-            </a>
-          </li>
-        
-          <li>
-            <span class='cov none'>100</span>
             <a href='#lib/highlight_repo/repo.ex'>
               
               
@@ -393,12 +382,45 @@ function find(y) {
         
           <li>
             <span class='cov high'>100</span>
+            <a href='#lib/highlight_repo/services/github_service.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo/services/</span>
+              
+              <span class='basename'>github_service.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>100</span>
+            <a href='#lib/highlight_repo/services/repo_service.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo/services/</span>
+              
+              <span class='basename'>repo_service.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov high'>100</span>
             <a href='#lib/highlight_repo_web/controllers/page_controller.ex'>
               
               
                 <span class='dirname'>lib/highlight_repo_web/controllers/</span>
               
               <span class='basename'>page_controller.ex</span>
+            </a>
+          </li>
+        
+          <li>
+            <span class='cov medium'>50</span>
+            <a href='#lib/highlight_repo_web/controllers/repo_controller.ex'>
+              
+              
+                <span class='dirname'>lib/highlight_repo_web/controllers/</span>
+              
+              <span class='basename'>repo_controller.ex</span>
             </a>
           </li>
         
@@ -425,7 +447,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov medium'>50</span>
+            <span class='cov medium'>60</span>
             <a href='#lib/highlight_repo_web/router.ex'>
               
               
@@ -482,10 +504,10 @@ function find(y) {
       </div>
 
       <div id='stats' class='high'>
-        <div class='percentage'>77.8</div>
-        <div class='sloc'>9</div>
-        <div class='hits'>15</div>
-        <div class='misses'>2</div>
+        <div class='percentage'>86.4</div>
+        <div class='sloc'>22</div>
+        <div class='hits'>41</div>
+        <div class='misses'>3</div>
       </div>
       <div id='files'>
         
@@ -583,75 +605,6 @@ function find(y) {
           </div>
         
           <div class='file'>
-            <h2 id='lib/highlight_repo/mailer.ex'>lib/highlight_repo/mailer.ex</h2>
-            <div id='stats' class='none'>
-              <div class='percentage'>100</div>
-              <div class='sloc'>0</div>
-              <div class='hits'>0</div>
-              <div class='misses'>0</div>
-            </div>
-            <table id='source'>
-              <thead>
-                <tr>
-                  <th>Line</th>
-                  <th>Hits</th>
-                  <th>Source</th>
-                </tr>
-              <tbody>
-                
-                  
-                      <tr>
-                        <td class='line'>0</td>
-                        <td class='hits'></td>
-                        <td class='source'>defmodule HighlightRepo.Mailer do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>1</td>
-                        <td class='hits'></td>
-                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>2</td>
-                        <td class='hits'></td>
-                        <td class='source'>  Mailer</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>3</td>
-                        <td class='hits'></td>
-                        <td class='source'>  &quot;&quot;&quot;</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>4</td>
-                        <td class='hits'></td>
-                        <td class='source'>  use Swoosh.Mailer, otp_app: :highlight_repo</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>5</td>
-                        <td class='hits'></td>
-                        <td class='source'>end</td>
-                      </tr>
-                  
-                
-              </tbody>
-            </table>
-          </div>
-        
-          <div class='file'>
             <h2 id='lib/highlight_repo/repo.ex'>lib/highlight_repo/repo.ex</h2>
             <div id='stats' class='none'>
               <div class='percentage'>100</div>
@@ -703,6 +656,352 @@ function find(y) {
                   
                       <tr>
                         <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo/services/github_service.ex'>lib/highlight_repo/services/github_service.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>8</div>
+              <div class='hits'>18</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepo.Services.GithubService do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  GithubService</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @github_repos_api &quot;https://api.github.com/search/repositories&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>  defp call_github_api(language) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>7</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    url = @github_repos_api &lt;&gt; &quot;?q=language:#{language}&amp;sort=stars&amp;order=desc&amp;page=1&amp;per_page=1&quot;</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>9</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    {:ok, response} = HTTPoison.get(url)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>11</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    case response.status_code == 200 do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>12</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>      true -&gt; Jason.decode(response.body)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>13</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      false -&gt; {:error, &quot;Github api not available at the moment, please try again later&quot;}</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>14</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>15</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>16</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>17</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @spec get_repos_by_language(any) :: any</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>18</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def get_repos_by_language(language) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>19</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    case call_github_api(language) do</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>20</td>
+                        <td class='hits'></td>
+                        <td class='source'>      {:ok, repos} -&gt;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>21</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>        repos[&quot;items&quot;]</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>22</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>      {:error, message} -&gt; message</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>23</td>
+                        <td class='hits'></td>
+                        <td class='source'>      end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>24</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>25</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo/services/repo_service.ex'>lib/highlight_repo/services/repo_service.ex</h2>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>2</div>
+              <div class='misses'>0</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepo.Services.RepoService do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @moduledoc &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'>  RepoService</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  &quot;&quot;&quot;</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias HighlightRepo.Services.GithubService</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @spec repos_info(any) :: any</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>7</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def repos_info(language) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>8</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    response = GithubService.get_repos_by_language(language)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>9</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    response</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -782,6 +1081,139 @@ function find(y) {
                         <td class='line'>6</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
+                      </tr>
+                  
+                
+              </tbody>
+            </table>
+          </div>
+        
+          <div class='file'>
+            <h2 id='lib/highlight_repo_web/controllers/repo_controller.ex'>lib/highlight_repo_web/controllers/repo_controller.ex</h2>
+            <div id='stats' class='medium'>
+              <div class='percentage'>50</div>
+              <div class='sloc'>2</div>
+              <div class='hits'>1</div>
+              <div class='misses'>1</div>
+            </div>
+            <table id='source'>
+              <thead>
+                <tr>
+                  <th>Line</th>
+                  <th>Hits</th>
+                  <th>Source</th>
+                </tr>
+              <tbody>
+                
+                  
+                      <tr>
+                        <td class='line'>0</td>
+                        <td class='hits'></td>
+                        <td class='source'>defmodule HighlightRepoWeb.RepoController do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>1</td>
+                        <td class='hits'></td>
+                        <td class='source'>  use HighlightRepoWeb, :controller</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>2</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
+                        <td class='source'>  alias HighlightRepo.Services.RepoService</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>4</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>5</td>
+                        <td class='hits'></td>
+                        <td class='source'>  @spec highlighted_repos(Plug.Conn.t(), map) :: Plug.Conn.t()</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>6</td>
+                        <td class='hits'></td>
+                        <td class='source'>  def highlighted_repos(conn, %{&quot;language&quot; =&gt; language}) do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='hit'>
+                        <td class='line'>7</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    {:ok, response} = RepoService.repos_info(language)</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>8</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr class='miss'>
+                        <td class='line'>9</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>    render(conn, &quot;repos_info.html&quot;, %{&quot;data&quot; =&gt; response})</td>
+                      </tr>
+                    
+                
+                  
+                      <tr>
+                        <td class='line'>10</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>11</td>
+                        <td class='hits'></td>
+                        <td class='source'>end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>12</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>13</td>
+                        <td class='hits'></td>
+                        <td class='source'># Service (Call on Github API (Github Service)) -&gt; Context -&gt; Schema</td>
                       </tr>
                   
                 
@@ -1426,9 +1858,9 @@ function find(y) {
           <div class='file'>
             <h2 id='lib/highlight_repo_web/router.ex'>lib/highlight_repo_web/router.ex</h2>
             <div id='stats' class='medium'>
-              <div class='percentage'>50</div>
-              <div class='sloc'>4</div>
-              <div class='hits'>2</div>
+              <div class='percentage'>60</div>
+              <div class='sloc'>5</div>
+              <div class='hits'>3</div>
               <div class='misses'>2</div>
             </div>
             <table id='source'>
@@ -1460,13 +1892,21 @@ function find(y) {
                       <tr>
                         <td class='line'>2</td>
                         <td class='hits'></td>
+                        <td class='source'>  alias HighlightRepoWeb.RepoController</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>3</td>
+                        <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>3</td>
+                        <td class='line'>4</td>
                         <td class='hits'>1</td>
                         <td class='source'>  pipeline :browser do</td>
                       </tr>
@@ -1474,7 +1914,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>4</td>
+                        <td class='line'>5</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :accepts, [&quot;html&quot;]</td>
                       </tr>
@@ -1482,7 +1922,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>5</td>
+                        <td class='line'>6</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :fetch_session</td>
                       </tr>
@@ -1490,7 +1930,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>6</td>
+                        <td class='line'>7</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :fetch_live_flash</td>
                       </tr>
@@ -1498,7 +1938,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>7</td>
+                        <td class='line'>8</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :put_root_layout, {HighlightRepoWeb.LayoutView, :root}</td>
                       </tr>
@@ -1506,7 +1946,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>8</td>
+                        <td class='line'>9</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :protect_from_forgery</td>
                       </tr>
@@ -1514,7 +1954,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>9</td>
+                        <td class='line'>10</td>
                         <td class='hits'></td>
                         <td class='source'>    plug :put_secure_browser_headers</td>
                       </tr>
@@ -1522,7 +1962,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>10</td>
+                        <td class='line'>11</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1530,7 +1970,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>11</td>
+                        <td class='line'>12</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
@@ -1538,7 +1978,7 @@ function find(y) {
                 
                   
                       <tr class='miss'>
-                        <td class='line'>12</td>
+                        <td class='line'>13</td>
                         <td class='hits'>0</td>
                         <td class='source'>  pipeline :api do</td>
                       </tr>
@@ -1546,17 +1986,9 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>13</td>
-                        <td class='hits'></td>
-                        <td class='source'>    plug :accepts, [&quot;json&quot;]</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
                         <td class='line'>14</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>    plug :accepts, [&quot;json&quot;]</td>
                       </tr>
                   
                 
@@ -1569,18 +2001,18 @@ function find(y) {
                   
                 
                   
-                      <tr>
+                      <tr class='hit'>
                         <td class='line'>16</td>
-                        <td class='hits'></td>
-                        <td class='source'>  scope &quot;/&quot;, HighlightRepoWeb do</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    post &quot;/repos/{language}&quot;, RepoController, :highlighted_repos</td>
                       </tr>
-                  
+                    
                 
                   
                       <tr>
                         <td class='line'>17</td>
                         <td class='hits'></td>
-                        <td class='source'>    pipe_through :browser</td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -1593,18 +2025,18 @@ function find(y) {
                   
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>19</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>    get &quot;/&quot;, PageController, :index</td>
+                        <td class='hits'></td>
+                        <td class='source'>  scope &quot;/&quot;, HighlightRepoWeb do</td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
                         <td class='line'>20</td>
                         <td class='hits'></td>
-                        <td class='source'>  end</td>
+                        <td class='source'>    pipe_through :browser</td>
                       </tr>
                   
                 
@@ -1617,18 +2049,18 @@ function find(y) {
                   
                 
                   
-                      <tr>
+                      <tr class='hit'>
                         <td class='line'>22</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Other scopes may use custom stacks.</td>
+                        <td class='hits'>1</td>
+                        <td class='source'>    get &quot;/&quot;, PageController, :index</td>
                       </tr>
-                  
+                    
                 
                   
                       <tr>
                         <td class='line'>23</td>
                         <td class='hits'></td>
-                        <td class='source'>  # scope &quot;/api&quot;, HighlightRepoWeb do</td>
+                        <td class='source'>  end</td>
                       </tr>
                   
                 
@@ -1636,7 +2068,7 @@ function find(y) {
                       <tr>
                         <td class='line'>24</td>
                         <td class='hits'></td>
-                        <td class='source'>  #   pipe_through :api</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1644,7 +2076,7 @@ function find(y) {
                       <tr>
                         <td class='line'>25</td>
                         <td class='hits'></td>
-                        <td class='source'>  # end</td>
+                        <td class='source'>  # Other scopes may use custom stacks.</td>
                       </tr>
                   
                 
@@ -1652,7 +2084,7 @@ function find(y) {
                       <tr>
                         <td class='line'>26</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  # scope &quot;/api&quot;, HighlightRepoWeb do</td>
                       </tr>
                   
                 
@@ -1660,7 +2092,7 @@ function find(y) {
                       <tr>
                         <td class='line'>27</td>
                         <td class='hits'></td>
-                        <td class='source'>  # Enables LiveDashboard only for development</td>
+                        <td class='source'>  #   pipe_through :api</td>
                       </tr>
                   
                 
@@ -1668,7 +2100,7 @@ function find(y) {
                       <tr>
                         <td class='line'>28</td>
                         <td class='hits'></td>
-                        <td class='source'>  #</td>
+                        <td class='source'>  # end</td>
                       </tr>
                   
                 
@@ -1676,7 +2108,7 @@ function find(y) {
                       <tr>
                         <td class='line'>29</td>
                         <td class='hits'></td>
-                        <td class='source'>  # If you want to use the LiveDashboard in production, you should put</td>
+                        <td class='source'></td>
                       </tr>
                   
                 
@@ -1684,7 +2116,7 @@ function find(y) {
                       <tr>
                         <td class='line'>30</td>
                         <td class='hits'></td>
-                        <td class='source'>  # it behind authentication and allow only admins to access it.</td>
+                        <td class='source'>  # Enables LiveDashboard only for development</td>
                       </tr>
                   
                 
@@ -1692,7 +2124,7 @@ function find(y) {
                       <tr>
                         <td class='line'>31</td>
                         <td class='hits'></td>
-                        <td class='source'>  # If your application does not have an admins-only section yet,</td>
+                        <td class='source'>  #</td>
                       </tr>
                   
                 
@@ -1700,7 +2132,7 @@ function find(y) {
                       <tr>
                         <td class='line'>32</td>
                         <td class='hits'></td>
-                        <td class='source'>  # you can use Plug.BasicAuth to set up some basic authentication</td>
+                        <td class='source'>  # If you want to use the LiveDashboard in production, you should put</td>
                       </tr>
                   
                 
@@ -1708,7 +2140,7 @@ function find(y) {
                       <tr>
                         <td class='line'>33</td>
                         <td class='hits'></td>
-                        <td class='source'>  # as long as you are also using SSL (which you should anyway).</td>
+                        <td class='source'>  # it behind authentication and allow only admins to access it.</td>
                       </tr>
                   
                 
@@ -1716,7 +2148,7 @@ function find(y) {
                       <tr>
                         <td class='line'>34</td>
                         <td class='hits'></td>
-                        <td class='source'>  if Mix.env() in [:dev, :test] do</td>
+                        <td class='source'>  # If your application does not have an admins-only section yet,</td>
                       </tr>
                   
                 
@@ -1724,7 +2156,7 @@ function find(y) {
                       <tr>
                         <td class='line'>35</td>
                         <td class='hits'></td>
-                        <td class='source'>    import Phoenix.LiveDashboard.Router</td>
+                        <td class='source'>  # you can use Plug.BasicAuth to set up some basic authentication</td>
                       </tr>
                   
                 
@@ -1732,7 +2164,7 @@ function find(y) {
                       <tr>
                         <td class='line'>36</td>
                         <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>  # as long as you are also using SSL (which you should anyway).</td>
                       </tr>
                   
                 
@@ -1740,7 +2172,7 @@ function find(y) {
                       <tr>
                         <td class='line'>37</td>
                         <td class='hits'></td>
-                        <td class='source'>    scope &quot;/&quot; do</td>
+                        <td class='source'>  if Mix.env() in [:dev, :test] do</td>
                       </tr>
                   
                 
@@ -1748,7 +2180,7 @@ function find(y) {
                       <tr>
                         <td class='line'>38</td>
                         <td class='hits'></td>
-                        <td class='source'>      pipe_through :browser</td>
+                        <td class='source'>    import Phoenix.LiveDashboard.Router</td>
                       </tr>
                   
                 
@@ -1761,88 +2193,16 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr>
                         <td class='line'>40</td>
-                        <td class='hits'>0</td>
-                        <td class='source'>      live_dashboard &quot;/dashboard&quot;, metrics: HighlightRepoWeb.Telemetry</td>
+                        <td class='hits'></td>
+                        <td class='source'>    scope &quot;/&quot; do</td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
                         <td class='line'>41</td>
-                        <td class='hits'></td>
-                        <td class='source'>    end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>42</td>
-                        <td class='hits'></td>
-                        <td class='source'>  end</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>43</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>44</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Enables the Swoosh mailbox preview in development.</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>45</td>
-                        <td class='hits'></td>
-                        <td class='source'>  #</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>46</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # Note that preview only shows emails that were sent by the same</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>47</td>
-                        <td class='hits'></td>
-                        <td class='source'>  # node running the Phoenix server.</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>48</td>
-                        <td class='hits'></td>
-                        <td class='source'>  if Mix.env() == :dev do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>49</td>
-                        <td class='hits'></td>
-                        <td class='source'>    scope &quot;/dev&quot; do</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>50</td>
                         <td class='hits'></td>
                         <td class='source'>      pipe_through :browser</td>
                       </tr>
@@ -1850,23 +2210,23 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>51</td>
+                        <td class='line'>42</td>
                         <td class='hits'></td>
                         <td class='source'></td>
                       </tr>
                   
                 
                   
-                      <tr>
-                        <td class='line'>52</td>
-                        <td class='hits'></td>
-                        <td class='source'>      forward &quot;/mailbox&quot;, Plug.Swoosh.MailboxPreview</td>
+                      <tr class='miss'>
+                        <td class='line'>43</td>
+                        <td class='hits'>0</td>
+                        <td class='source'>      live_dashboard &quot;/dashboard&quot;, metrics: HighlightRepoWeb.Telemetry</td>
                       </tr>
-                  
+                    
                 
                   
                       <tr>
-                        <td class='line'>53</td>
+                        <td class='line'>44</td>
                         <td class='hits'></td>
                         <td class='source'>    end</td>
                       </tr>
@@ -1874,7 +2234,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>54</td>
+                        <td class='line'>45</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1882,7 +2242,103 @@ function find(y) {
                 
                   
                       <tr>
+                        <td class='line'>46</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>47</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # Enables the Swoosh mailbox preview in development.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>48</td>
+                        <td class='hits'></td>
+                        <td class='source'>  #</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>49</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # Note that preview only shows emails that were sent by the same</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>50</td>
+                        <td class='hits'></td>
+                        <td class='source'>  # node running the Phoenix server.</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>51</td>
+                        <td class='hits'></td>
+                        <td class='source'>  if Mix.env() == :dev do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>52</td>
+                        <td class='hits'></td>
+                        <td class='source'>    scope &quot;/dev&quot; do</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>53</td>
+                        <td class='hits'></td>
+                        <td class='source'>      pipe_through :browser</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>54</td>
+                        <td class='hits'></td>
+                        <td class='source'></td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
                         <td class='line'>55</td>
+                        <td class='hits'></td>
+                        <td class='source'>      forward &quot;/mailbox&quot;, Plug.Swoosh.MailboxPreview</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>56</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>57</td>
+                        <td class='hits'></td>
+                        <td class='source'>  end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>58</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
@@ -1897,7 +2353,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>1</div>
-              <div class='hits'>2</div>
+              <div class='hits'>3</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -2016,7 +2472,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>13</td>
-                        <td class='hits'>2</td>
+                        <td class='hits'>3</td>
                         <td class='source'>    Phoenix.Controller.status_message_from_template(template)</td>
                       </tr>
                     
@@ -2168,7 +2624,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>3</div>
-              <div class='hits'>10</div>
+              <div class='hits'>13</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -2351,7 +2807,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>21</td>
-                        <td class='hits'>4</td>
+                        <td class='hits'>5</td>
                         <td class='source'>  using do</td>
                       </tr>
                     
@@ -2471,7 +2927,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>36</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>4</td>
                         <td class='source'>    pid = Sandbox.start_owner!(HighlightRepo.Repo, shared: not tags[:async])</td>
                       </tr>
                     
@@ -2479,7 +2935,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>37</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>4</td>
                         <td class='source'>    on_exit(fn -&gt; Sandbox.stop_owner(pid) end)</td>
                       </tr>
                     
