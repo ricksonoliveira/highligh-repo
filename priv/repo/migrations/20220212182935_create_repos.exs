@@ -4,7 +4,7 @@ defmodule HighlightRepo.Repo.Migrations.CreateRepos do
   def change do
     create table(:repos) do
       add :name, :string
-      add :description, :string
+      add :description, :text
       add :forks, :integer
       add :stars, :integer
       add :url, :string

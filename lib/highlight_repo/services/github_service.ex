@@ -5,7 +5,7 @@ defmodule HighlightRepo.Services.GithubService do
   @github_repos_api "https://api.github.com/search/repositories"
 
   defp call_github_api(language) do
-    url = @github_repos_api <> "?q=language:#{language}&sort=stars&order=desc&page=1&per_page=1"
+    url = @github_repos_api <> "?q=language:#{language}&sort=stars&order=desc&page=1&per_page=10"
 
     {:ok, response} = HTTPoison.get(url)
 
@@ -19,10 +19,10 @@ defmodule HighlightRepo.Services.GithubService do
   def get_repos_by_language(language) do
     case call_github_api(language) do
       {:ok, repos} ->
-        repos["items"]
+        {:ok, repos["items"]}
 
       {:error, message} ->
-        message
+        {:error, message}
     end
   end
 end

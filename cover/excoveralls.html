@@ -370,7 +370,7 @@ function find(y) {
           </li>
         
           <li>
-            <span class='cov medium'>66.7</span>
+            <span class='cov high'>100</span>
             <a href='#lib/highlight_repo/git_repos.ex'>
               
               
@@ -537,10 +537,10 @@ function find(y) {
       </div>
 
       <div id='stats' class='high'>
-        <div class='percentage'>83.9</div>
-        <div class='sloc'>31</div>
-        <div class='hits'>54</div>
-        <div class='misses'>5</div>
+        <div class='percentage'>87.5</div>
+        <div class='sloc'>32</div>
+        <div class='hits'>218</div>
+        <div class='misses'>4</div>
       </div>
       <div id='files'>
         
@@ -639,11 +639,11 @@ function find(y) {
         
           <div class='file'>
             <h2 id='lib/highlight_repo/git_repos.ex'>lib/highlight_repo/git_repos.ex</h2>
-            <div id='stats' class='medium'>
-              <div class='percentage'>66.7</div>
+            <div id='stats' class='high'>
+              <div class='percentage'>100</div>
               <div class='sloc'>3</div>
-              <div class='hits'>2</div>
-              <div class='misses'>1</div>
+              <div class='hits'>26</div>
+              <div class='misses'>0</div>
             </div>
             <table id='source'>
               <thead>
@@ -745,7 +745,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>11</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>3</td>
                         <td class='source'>    Repo.all(GitRepo)</td>
                       </tr>
                     
@@ -799,9 +799,9 @@ function find(y) {
                   
                 
                   
-                      <tr class='miss'>
+                      <tr class='hit'>
                         <td class='line'>18</td>
-                        <td class='hits'>0</td>
+                        <td class='hits'>1</td>
                         <td class='source'>  def get_git_repo!(id), do: Repo.get!(GitRepo, id) |&gt; Repo.preload(:owner)</td>
                       </tr>
                     
@@ -905,7 +905,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>31</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>22</td>
                         <td class='source'>      |&gt; Repo.insert()</td>
                       </tr>
                     
@@ -935,7 +935,7 @@ function find(y) {
             <div id='stats' class='medium'>
               <div class='percentage'>50</div>
               <div class='sloc'>2</div>
-              <div class='hits'>2</div>
+              <div class='hits'>34</div>
               <div class='misses'>1</div>
             </div>
             <table id='source'>
@@ -982,7 +982,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>4</td>
-                        <td class='hits'>2</td>
+                        <td class='hits'>34</td>
                         <td class='source'>  schema &quot;owners&quot; do</td>
                       </tr>
                     
@@ -1177,7 +1177,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>2</div>
-              <div class='hits'>7</div>
+              <div class='hits'>61</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1224,7 +1224,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>4</td>
-                        <td class='hits'>6</td>
+                        <td class='hits'>37</td>
                         <td class='source'>  schema &quot;repos&quot; do</td>
                       </tr>
                     
@@ -1344,7 +1344,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>19</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>24</td>
                         <td class='source'>    |&gt; validate_required([:name, :description, :forks, :stars, :url])</td>
                       </tr>
                     
@@ -1374,7 +1374,7 @@ function find(y) {
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
               <div class='sloc'>8</div>
-              <div class='hits'>18</div>
+              <div class='hits'>30</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1445,8 +1445,8 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>7</td>
-                        <td class='hits'>3</td>
-                        <td class='source'>    url = @github_repos_api &lt;&gt; &quot;?q=language:#{language}&amp;sort=stars&amp;order=desc&amp;page=1&amp;per_page=1&quot;</td>
+                        <td class='hits'>5</td>
+                        <td class='source'>    url = @github_repos_api &lt;&gt; &quot;?q=language:#{language}&amp;sort=stars&amp;order=desc&amp;page=1&amp;per_page=10&quot;</td>
                       </tr>
                     
                 
@@ -1461,7 +1461,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>9</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>5</td>
                         <td class='source'>    {:ok, response} = HTTPoison.get(url)</td>
                       </tr>
                     
@@ -1477,7 +1477,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>11</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>5</td>
                         <td class='source'>    case response.status_code == 200 do</td>
                       </tr>
                     
@@ -1485,7 +1485,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>12</td>
-                        <td class='hits'>2</td>
+                        <td class='hits'>3</td>
                         <td class='source'>      true -&gt; Jason.decode(response.body)</td>
                       </tr>
                     
@@ -1493,7 +1493,7 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>13</td>
-                        <td class='hits'>1</td>
+                        <td class='hits'>2</td>
                         <td class='source'>      false -&gt; {:error, &quot;Github api not available at the moment, please try again later&quot;}</td>
                       </tr>
                     
@@ -1541,26 +1541,26 @@ function find(y) {
                   
                       <tr class='hit'>
                         <td class='line'>19</td>
-                        <td class='hits'>3</td>
+                        <td class='hits'>5</td>
                         <td class='source'>    case call_github_api(language) do</td>
                       </tr>
                     
                 
                   
-                      <tr>
+                      <tr class='hit'>
                         <td class='line'>20</td>
-                        <td class='hits'></td>
+                        <td class='hits'>3</td>
                         <td class='source'>      {:ok, repos} -&gt;</td>
                       </tr>
-                  
+                    
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>21</td>
-                        <td class='hits'>2</td>
-                        <td class='source'>        repos[&quot;items&quot;]</td>
+                        <td class='hits'></td>
+                        <td class='source'>        {:ok, repos[&quot;items&quot;]}</td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
@@ -1571,20 +1571,20 @@ function find(y) {
                   
                 
                   
-                      <tr>
+                      <tr class='hit'>
                         <td class='line'>23</td>
-                        <td class='hits'></td>
+                        <td class='hits'>2</td>
                         <td class='source'>      {:error, message} -&gt;</td>
                       </tr>
-                  
+                    
                 
                   
-                      <tr class='hit'>
+                      <tr>
                         <td class='line'>24</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>        message</td>
+                        <td class='hits'></td>
+                        <td class='source'>        {:error, message}</td>
                       </tr>
-                    
+                  
                 
                   
                       <tr>
@@ -1618,8 +1618,8 @@ function find(y) {
             <h2 id='lib/highlight_repo/services/repo_service.ex'>lib/highlight_repo/services/repo_service.ex</h2>
             <div id='stats' class='high'>
               <div class='percentage'>100</div>
-              <div class='sloc'>4</div>
-              <div class='hits'>4</div>
+              <div class='sloc'>5</div>
+              <div class='hits'>46</div>
               <div class='misses'>0</div>
             </div>
             <table id='source'>
@@ -1683,47 +1683,47 @@ function find(y) {
                       <tr>
                         <td class='line'>6</td>
                         <td class='hits'></td>
-                        <td class='source'>  @spec repos_info(any) :: any</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>7</td>
-                        <td class='hits'></td>
                         <td class='source'>  def repos_info(language) do</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>8</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>     response = GithubService.get_repos_by_language(language)</td>
+                        <td class='line'>7</td>
+                        <td class='hits'>3</td>
+                        <td class='source'>    case GithubService.get_repos_by_language(language) do</td>
                       </tr>
                     
                 
                   
                       <tr>
-                        <td class='line'>9</td>
+                        <td class='line'>8</td>
                         <td class='hits'></td>
-                        <td class='source'>     |&gt; (Enum.map (fn repo -&gt;</td>
+                        <td class='source'>      {:ok, response} -&gt;</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
+                        <td class='line'>9</td>
+                        <td class='hits'>2</td>
+                        <td class='source'>        Enum.map(response, fn repo -&gt;</td>
+                      </tr>
+                    
+                
+                  
+                      <tr class='hit'>
                         <td class='line'>10</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>        owner = repo[&quot;owner&quot;]</td>
+                        <td class='hits'>20</td>
+                        <td class='source'>          owner = repo[&quot;owner&quot;]</td>
                       </tr>
                     
                 
                   
                       <tr class='hit'>
                         <td class='line'>11</td>
-                        <td class='hits'>1</td>
-                        <td class='source'>        GitRepos.create_git_repo_with_owner(</td>
+                        <td class='hits'>20</td>
+                        <td class='source'>          GitRepos.create_git_repo_with_owner(</td>
                       </tr>
                     
                 
@@ -1731,7 +1731,7 @@ function find(y) {
                       <tr>
                         <td class='line'>12</td>
                         <td class='hits'></td>
-                        <td class='source'>          %{</td>
+                        <td class='source'>            %{</td>
                       </tr>
                   
                 
@@ -1739,7 +1739,7 @@ function find(y) {
                       <tr>
                         <td class='line'>13</td>
                         <td class='hits'></td>
-                        <td class='source'>            name: repo[&quot;full_name&quot;],</td>
+                        <td class='source'>              name: repo[&quot;full_name&quot;],</td>
                       </tr>
                   
                 
@@ -1747,7 +1747,7 @@ function find(y) {
                       <tr>
                         <td class='line'>14</td>
                         <td class='hits'></td>
-                        <td class='source'>            description: repo[&quot;description&quot;],</td>
+                        <td class='source'>              description: repo[&quot;description&quot;],</td>
                       </tr>
                   
                 
@@ -1755,7 +1755,7 @@ function find(y) {
                       <tr>
                         <td class='line'>15</td>
                         <td class='hits'></td>
-                        <td class='source'>            forks: repo[&quot;forks&quot;],</td>
+                        <td class='source'>              forks: repo[&quot;forks&quot;],</td>
                       </tr>
                   
                 
@@ -1763,7 +1763,7 @@ function find(y) {
                       <tr>
                         <td class='line'>16</td>
                         <td class='hits'></td>
-                        <td class='source'>            stars: repo[&quot;stargazers_count&quot;],</td>
+                        <td class='source'>              stars: repo[&quot;stargazers_count&quot;],</td>
                       </tr>
                   
                 
@@ -1771,7 +1771,7 @@ function find(y) {
                       <tr>
                         <td class='line'>17</td>
                         <td class='hits'></td>
-                        <td class='source'>            url: repo[&quot;html_url&quot;],</td>
+                        <td class='source'>              url: repo[&quot;html_url&quot;],</td>
                       </tr>
                   
                 
@@ -1779,7 +1779,7 @@ function find(y) {
                       <tr>
                         <td class='line'>18</td>
                         <td class='hits'></td>
-                        <td class='source'>          },</td>
+                        <td class='source'>            },</td>
                       </tr>
                   
                 
@@ -1787,7 +1787,7 @@ function find(y) {
                       <tr>
                         <td class='line'>19</td>
                         <td class='hits'></td>
-                        <td class='source'>          %{</td>
+                        <td class='source'>            %{</td>
                       </tr>
                   
                 
@@ -1795,7 +1795,7 @@ function find(y) {
                       <tr>
                         <td class='line'>20</td>
                         <td class='hits'></td>
-                        <td class='source'>            avatar_url: owner[&quot;avatar_url&quot;],</td>
+                        <td class='source'>              avatar_url: owner[&quot;avatar_url&quot;],</td>
                       </tr>
                   
                 
@@ -1803,7 +1803,7 @@ function find(y) {
                       <tr>
                         <td class='line'>21</td>
                         <td class='hits'></td>
-                        <td class='source'>            name: owner[&quot;login&quot;],</td>
+                        <td class='source'>              name: owner[&quot;login&quot;],</td>
                       </tr>
                   
                 
@@ -1811,7 +1811,7 @@ function find(y) {
                       <tr>
                         <td class='line'>22</td>
                         <td class='hits'></td>
-                        <td class='source'>            url: owner[&quot;html_url&quot;]</td>
+                        <td class='source'>              url: owner[&quot;html_url&quot;]</td>
                       </tr>
                   
                 
@@ -1819,7 +1819,7 @@ function find(y) {
                       <tr>
                         <td class='line'>23</td>
                         <td class='hits'></td>
-                        <td class='source'>          })</td>
+                        <td class='source'>            })</td>
                       </tr>
                   
                 
@@ -1827,29 +1827,37 @@ function find(y) {
                       <tr>
                         <td class='line'>24</td>
                         <td class='hits'></td>
-                        <td class='source'>     end))</td>
-                      </tr>
-                  
-                
-                  
-                      <tr>
-                        <td class='line'>25</td>
-                        <td class='hits'></td>
-                        <td class='source'></td>
+                        <td class='source'>        end)</td>
                       </tr>
                   
                 
                   
                       <tr class='hit'>
-                        <td class='line'>26</td>
+                        <td class='line'>25</td>
                         <td class='hits'>1</td>
-                        <td class='source'>     response</td>
+                        <td class='source'>      {:error, message} -&gt;</td>
                       </tr>
                     
                 
                   
                       <tr>
+                        <td class='line'>26</td>
+                        <td class='hits'></td>
+                        <td class='source'>        {:error, message}</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
                         <td class='line'>27</td>
+                        <td class='hits'></td>
+                        <td class='source'>    end</td>
+                      </tr>
+                  
+                
+                  
+                      <tr>
+                        <td class='line'>28</td>
                         <td class='hits'></td>
                         <td class='source'>  end</td>
                       </tr>
@@ -1857,7 +1865,7 @@ function find(y) {
                 
                   
                       <tr>
-                        <td class='line'>28</td>
+                        <td class='line'>29</td>
                         <td class='hits'></td>
                         <td class='source'>end</td>
                       </tr>
