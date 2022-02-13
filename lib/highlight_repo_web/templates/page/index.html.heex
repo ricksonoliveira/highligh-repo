@@ -16,25 +16,36 @@
 
   <script>
   document.getElementById("language").addEventListener("change", (event) => {
-    const response = fetch('https://api.github.com/repos/ricksonoliveira/blog')
-      .then(response => response.json())
-      .then(data => {
-          const items = [data]
-          items.map(item => {
-            const li = document.createElement('li')
-
-            li.innerHTML = `<li class="collection-item avatar">
-              <i class="material-icons circle red">play_arrow</i>
-              <span class="title">Repo name</span>
-              <p>${item.url}<p>
-              <p>${item.name}<p>
-              <p>${item.details}<p>
-              <p>${item.forks}<p>
-              <p>${item.stars}<p>
-              </p>
-            </li>`
-            document.getElementById('list').appendChild(li)
+    const response = fetch(`/repos`, {
+          method: "POST",
+          headers: {
+            'Accept': 'application/json, text/plain, */*',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            language: event.target.value
           })
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log(event.target.value)
+        console.log(data)
+        const items = [data]
+        items.map(item => {
+          const li = document.createElement('li')
+
+          li.innerHTML = `<li class="collection-item avatar">
+            <i class="material-icons circle red">play_arrow</i>
+            <span class="title">Repo name</span>
+            <p>${item.url}<p>
+            <p>${item.name}<p>
+            <p>${item.details}<p>
+            <p>${item.forks}<p>
+            <p>${item.stars}<p>
+            </p>
+          </li>`
+          document.getElementById('list').appendChild(li)
+        })
       });
     document.getElementById('list').innerHTML = ""
   })

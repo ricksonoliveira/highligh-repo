@@ -2,7 +2,6 @@ defmodule HighlightRepo.GitRepos do
   @moduledoc """
   The Repos context.
   """
-
   alias HighlightRepo.{Repos.GitRepo, Repo}
 
   @doc """
@@ -18,17 +17,26 @@ defmodule HighlightRepo.GitRepos do
   """
   def get_git_repo!(id), do: Repo.get!(GitRepo, id) |> Repo.preload(:owner)
 
-  @spec create_git_repo_with_owner(
-          :invalid | %{optional(:__struct__) => none, optional(atom | binary) => any},
-          any
-        ) :: any
   @doc """
   Creates a git_repos.
   """
-  def create_git_repo_with_owner(attrs \\ %{}, owner) do
-    %GitRepo{}
-      |> GitRepo.changeset(attrs)
-      |> Ecto.Changeset.put_assoc(:owner, owner)
-      |> Repo.insert()
+  def fetch_or_create_git_repo_with_owner(name, attrs \\ %{}, owner) do
+    case Repo.get_by(GitRepo, name: name) do
+      nil ->
+        new_repo =
+         %GitRepo{}
+         |> GitRepo.changeset(attrs)
+         |> Ecto.Changeset.put_assoc(:owner, owner)
+         |> Repo.insert()
+
+        case new_repo do
+          {:ok, repo} ->
+            {:ok, repo}
+          {:error, message} ->
+            {:error, message}
+        end
+      repo ->
+        {:ok, get_git_repo!(repo.id)}
+    end
   end
 end

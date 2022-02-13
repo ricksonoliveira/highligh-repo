@@ -4,14 +4,16 @@ defmodule HighlightRepo.Services.RepoService do
   """
   alias HighlightRepo.{Services.GithubService, GitRepos}
 
+  @spec repos_info(any) :: list | {:error, <<_::496>> | Jason.DecodeError.t()}
   def repos_info(language) do
     case GithubService.get_repos_by_language(language) do
       {:ok, response} ->
-        Enum.map(response, fn repo ->
+        {:ok, Enum.map(response, fn repo ->
           owner = repo["owner"]
-          GitRepos.create_git_repo_with_owner(
+          {:ok, repo} = GitRepos.fetch_or_create_git_repo_with_owner(
+            repo["name"],
             %{
-              name: repo["full_name"],
+              name: repo["name"],
               description: repo["description"],
               forks: repo["forks"],
               stars: repo["stargazers_count"],
@@ -22,7 +24,8 @@ defmodule HighlightRepo.Services.RepoService do
               name: owner["login"],
               url: owner["html_url"]
             })
-        end)
+          repo
+        end)}
       {:error, message} ->
         {:error, message}
     end

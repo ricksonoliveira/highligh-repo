@@ -5,7 +5,8 @@ defmodule HighlightRepo.Services.RepoServiceTest do
   @language "elixir"
 
   test "repos_info/1 will store into database and return" do
-    assert RepoService.repos_info(@language) |> Enum.count() == 10
+    {:ok, resp} = RepoService.repos_info(@language)
+    assert resp |> Enum.count() == 10
     assert GitRepos.list_repos() |> Enum.count() == 10
   end
 

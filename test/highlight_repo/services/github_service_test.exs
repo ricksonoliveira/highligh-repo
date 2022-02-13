@@ -5,8 +5,8 @@ defmodule HighlightRepo.Services.GithubServiceTest do
   @language "elixir"
 
   test "get_repos_by_language/1 will return github api response" do
-    {:ok, resp} = GithubService.get_repos_by_language(@language)
-    assert resp |> Enum.count() == 10
+        {:ok, resp} = GithubService.get_repos_by_language(@language)
+        assert resp |> Enum.count() == 10
   end
 
   test "get_repos_by_language/1 will return github api with error" do

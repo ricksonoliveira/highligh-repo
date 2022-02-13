@@ -3,12 +3,16 @@ defmodule HighlightRepoWeb.RepoController do
 
   alias HighlightRepo.Services.RepoService
 
-  @spec highlighted_repos(Plug.Conn.t(), map) :: Plug.Conn.t()
   def highlighted_repos(conn, %{"language" => language}) do
-    {:ok, response} = RepoService.repos_info(language)
-
-    render(conn, "repos_info.html", %{"data" => response})
+    case RepoService.repos_info(language) do
+      {:ok, response} ->
+        conn
+        |> put_status(:ok)
+        |> render("repos_info.json", %{data: response})
+      {:error, message} ->
+        conn
+        |> put_status(:bad_request)
+        |> render("error_message.json", %{message: message})
+    end
   end
 end
-
-# Service (Call on Github API (Github Service)) -> Context -> Schema

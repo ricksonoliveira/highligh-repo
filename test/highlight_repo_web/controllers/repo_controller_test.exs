@@ -4,11 +4,11 @@ defmodule HighlightRepoWeb.RepoControllerTest do
   """
   use HighlightRepoWeb.ConnCase
 
-  test "get highlighted repos endpoint", %{conn: conn} do
-    conn =
-      conn
-      |> post(Routes.repo_path(conn, :highlighted_repos), %{language: "elixir"})
+  test "highlighted repos endpoint", %{conn: conn} do
+    assert post(conn, Routes.repo_path(conn, :highlighted_repos), %{language: "elixir"}).status == 200
+  end
 
-    assert {:ok, response} = conn
+  test "highlighted repos with error", %{conn: conn} do
+    assert post(conn, Routes.repo_path(conn, :highlighted_repos), %{language: ""}).status == 400
   end
 end

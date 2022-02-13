@@ -36,15 +36,22 @@ defmodule HighlightRepo.GitReposTest do
       assert GitRepos.get_git_repo!(git_repos.id) == git_repos
     end
 
-    test "create_git_repos/1 with valid data creates a git_repos" do
-      assert {:ok, %GitRepo{} = git_repos} = GitRepos.create_git_repo_with_owner(@repo, @owner)
+    test "fetch_or_create_git_repo_with_owner/3 with valid data creates a git_repo" do
+      assert {:ok, %GitRepo{} = git_repos} = GitRepos.fetch_or_create_git_repo_with_owner(@repo.name, @repo, @owner)
       assert git_repos.description == "Elixir Programming Language"
       assert git_repos.name == "elixir"
       assert git_repos.owner.name == "ricksonoliveira"
     end
 
-    test "create_git_repos/1 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = GitRepos.create_git_repo_with_owner(@invalid_attrs, %{})
+    test "fetch_or_create_git_repo_with_owner/3 with valid data gets a git_repo" do
+      assert {:ok, git_repos_fixture = git_repos} = GitRepos.fetch_or_create_git_repo_with_owner(@repo.name, @repo, @owner)
+      assert git_repos.description == "Elixir Programming Language"
+      assert git_repos.name == "elixir"
+      assert git_repos.owner.name == "ricksonoliveira"
+    end
+
+    test "fetch_or_create_git_repo_with_owner/3 with invalid data returns error changeset" do
+      assert {:error, %Ecto.Changeset{}} = GitRepos.fetch_or_create_git_repo_with_owner("", @invalid_attrs, %{})
       assert {:error, %Ecto.Changeset{}} = %Owner{} |> Owner.changeset(%{}) |> Repo.insert()
     end
   end
