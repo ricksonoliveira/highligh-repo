@@ -44,10 +44,12 @@ defmodule HighlightRepo.GitReposTest do
     end
 
     test "fetch_or_create_git_repo_with_owner/3 with valid data gets a git_repo" do
-      assert {:ok, git_repos_fixture = git_repos} = GitRepos.fetch_or_create_git_repo_with_owner(@repo.name, @repo, @owner)
-      assert git_repos.description == "Elixir Programming Language"
-      assert git_repos.name == "elixir"
-      assert git_repos.owner.name == "ricksonoliveira"
+      {:ok, existing_repo} = git_repos_fixture()
+      {:ok, repo} = GitRepos.fetch_or_create_git_repo_with_owner(existing_repo.name, @repo, @owner)
+
+      assert repo.description == "Elixir Programming Language"
+      assert repo.name == "elixir"
+      assert repo.owner.name == "ricksonoliveira"
     end
 
     test "fetch_or_create_git_repo_with_owner/3 with invalid data returns error changeset" do
