@@ -1,7 +1,7 @@
 defmodule HighlightRepo.GitReposTest do
   use HighlightRepo.DataCase
 
-  alias HighlightRepo.{GitRepos, Repos.GitRepo}
+  alias HighlightRepo.{Repo, GitRepos, Repos.GitRepo, Owners.Owner}
 
   describe "repos" do
 
@@ -45,6 +45,7 @@ defmodule HighlightRepo.GitReposTest do
 
     test "create_git_repos/1 with invalid data returns error changeset" do
       assert {:error, %Ecto.Changeset{}} = GitRepos.create_git_repo_with_owner(@invalid_attrs, %{})
+      assert {:error, %Ecto.Changeset{}} = %Owner{} |> Owner.changeset(%{}) |> Repo.insert()
     end
   end
 end
