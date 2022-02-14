@@ -15,6 +15,7 @@ defmodule HighlightRepoWeb.Router do
     plug :accepts, ["json"]
 
     post "/repos", RepoController, :highlighted_repos
+    get "/repo/{name}", RepoController, :get_repo
   end
 
   scope "/", HighlightRepoWeb do

@@ -8,6 +8,19 @@
       <option value="rust">Rust</option>
     </select>
   </div>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s10">
+          <textarea id="search" class="materialize-textarea"></textarea>
+          <label for="search">Search the name of a stored repository </label>
+        </div>
+        <div class="input-field col s2">
+          <a class="waves-effect waves-light btn" id="btn-search">search</a>
+        </div>
+      </div>
+    </form>
+  </div>
 
   <div>
     <ul id="list" class="collection">
@@ -15,6 +28,11 @@
   </div>
 
   <script>
+  document.getElementById("btn-search").addEventListener("click", () => {
+    const content = document.getElementById("search").value
+    console.log(content)
+  })
+
   document.getElementById("language").addEventListener("change", (event) => {
     if(event.target.value !== '') {
       const response = fetch(`/repos`, {
@@ -29,8 +47,12 @@
       })
       .then(response => response.json())
       .then(data => {
+        if(data.message) {
+          alert(data.message)
+        } else {
           const items = data.data
           items.map(item => {
+            console.log(item)
             const li = document.createElement('li')
 
             li.innerHTML =
@@ -43,7 +65,8 @@
             </li>`
             document.getElementById('list').appendChild(li)
           })
-        });
+        }
+      });
     }
     document.getElementById('list').innerHTML = ""
   })

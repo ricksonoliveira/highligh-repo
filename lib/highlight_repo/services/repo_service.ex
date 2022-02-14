@@ -2,9 +2,12 @@ defmodule HighlightRepo.Services.RepoService do
   @moduledoc """
   RepoService
   """
-  alias HighlightRepo.{Services.GithubService, GitRepos}
+  alias HighlightRepo.{Services.GithubService, GitRepos, Repo, Repos.GitRepo}
 
   @spec repos_info(any) :: list | {:error, <<_::496>> | Jason.DecodeError.t()}
+  @doc """
+  Get repos info
+  """
   def repos_info(language) do
     case GithubService.get_repos_by_language(language) do
       {:ok, response} ->
@@ -28,6 +31,21 @@ defmodule HighlightRepo.Services.RepoService do
         end)}
       {:error, message} ->
         {:error, message}
+    end
+  end
+
+  @spec get_repo(any) ::
+          {:error, <<_::552>>}
+          | {:ok, nil | [%{optional(atom) => any}] | %{optional(atom) => any}}
+  @doc """
+  Gets single repo
+  """
+  def get_repo(name) do
+    case Repo.get_by(GitRepo, name: name) do
+      nil ->
+        {:error, "This repo either does no exist or was not stored in our database yet."}
+      repo ->
+        {:ok, GitRepos.get_git_repo!(repo.id)}
     end
   end
 end
