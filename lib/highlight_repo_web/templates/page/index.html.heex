@@ -27,10 +27,35 @@
     </ul>
   </div>
 
+  <div id="search-result">
+  </div>
+
   <script>
   document.getElementById("btn-search").addEventListener("click", () => {
     const content = document.getElementById("search").value
-    console.log(content)
+    const response = fetch(`/repo?name=${content}`)
+      .then(response => response.json())
+      .then(data => {
+        if(data.message) {
+          alert(data.message)
+        } else {
+          const li = document.createElement('li')
+
+          li.innerHTML =
+          `<ul class="collection">
+            <li class="collection-item avatar">
+              <img src=${data.owner.avatar_url} alt="" class="circle">
+              <b><span class="title">${data.name}</span></b>
+              <p>${data.description}</p>
+              <b><span>Forks: ${data.forks}</span></b>
+              <b><span>Stars: ${data.stars}</span></b>
+            </li>
+          </ul`
+          document.getElementById('search-result').appendChild(li)
+        }
+      });
+      document.getElementById('search').innerHTML = ""
+      document.getElementById('search-result').innerHTML = ""
   })
 
   document.getElementById("language").addEventListener("change", (event) => {
