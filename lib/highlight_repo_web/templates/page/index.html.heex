@@ -10,7 +10,7 @@
   </div>
 
   <div>
-    <ul id="list">
+    <ul id="list" class="collection">
     </ul>
   </div>
 
@@ -30,19 +30,17 @@
     .then(data => {
         console.log(event.target.value)
         console.log(data)
-        const items = [data]
+        const items = data.data
         items.map(item => {
           const li = document.createElement('li')
 
-          li.innerHTML = `<li class="collection-item avatar">
-            <i class="material-icons circle red">play_arrow</i>
-            <span class="title">Repo name</span>
-            <p>${item.url}<p>
-            <p>${item.name}<p>
-            <p>${item.details}<p>
-            <p>${item.forks}<p>
-            <p>${item.stars}<p>
-            </p>
+          li.innerHTML =
+          `<li class="collection-item avatar">
+            <img src=${item.owner.avatar_url} alt="" class="circle">
+            <b><span class="title">${item.name}</span></b>
+            <p>${item.description}</p>
+            <b><span>Forks: ${item.forks}</span></b>
+            <b><span>Stars: ${item.stars}</span></b>
           </li>`
           document.getElementById('list').appendChild(li)
         })
