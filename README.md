@@ -71,22 +71,22 @@ type: `POST`
 **Response**
 
 ```json
-data: [
- {
-  "description": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications",
-  "forks": 2833,
-  "name": "elixir",
-  "owner": {
-    "avatar_url": "https://avatars.githubusercontent.com/u/1481354?v=4",
-    "name": "elixir-lang",
-    "url": "https://github.com/elixir-lang"
-  },
-  "stars": 19799,
-  "url": "https://github.com/elixir-lang/elixir"
- },
- {...},
- {...}
-]
+{
+  data: [
+    {
+      "description": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications",
+      "forks": 2833,
+      "name": "elixir",
+      "owner": {
+        "avatar_url": "https://avatars.githubusercontent.com/u/1481354?v=4",
+        "name": "elixir-lang",
+        "url": "https://github.com/elixir-lang"
+      },
+      "stars": 19799,
+      "url": "https://github.com/elixir-lang/elixir"
+    }
+  ]
+}
 ```
 
 ### **Get Repo**
