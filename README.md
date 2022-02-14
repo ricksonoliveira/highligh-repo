@@ -115,7 +115,3 @@ type: `GET`
   "url": "https://github.com/elixir-lang/elixir"
 }
 ```
-
-## Application image screen
-
-![alt text for screen readers](/home/elliot/Downloads/download.png "Highlight Repo App")
