@@ -2,7 +2,7 @@ defmodule HighlightRepo.GitRepos do
   @moduledoc """
   The Repos context.
   """
-  alias HighlightRepo.{Repos.GitRepo, Repo}
+  alias HighlightRepo.{Repo, Repos.GitRepo}
 
   @doc """
   Returns the list of repos.
@@ -24,17 +24,19 @@ defmodule HighlightRepo.GitRepos do
     case Repo.get_by(GitRepo, name: name) do
       nil ->
         new_repo =
-         %GitRepo{}
-         |> GitRepo.changeset(attrs)
-         |> Ecto.Changeset.put_assoc(:owner, owner)
-         |> Repo.insert()
+          %GitRepo{}
+          |> GitRepo.changeset(attrs)
+          |> Ecto.Changeset.put_assoc(:owner, owner)
+          |> Repo.insert()
 
         case new_repo do
           {:ok, repo} ->
             {:ok, repo}
+
           {:error, message} ->
             {:error, message}
         end
+
       repo ->
         {:ok, get_git_repo!(repo.id)}
     end

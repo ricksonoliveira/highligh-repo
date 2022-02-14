@@ -9,6 +9,7 @@ defmodule HighlightRepoWeb.RepoController do
         conn
         |> put_status(:ok)
         |> render("repos_info.json", %{data: response})
+
       {:error, message} ->
         conn
         |> put_status(:bad_request)
@@ -22,6 +23,7 @@ defmodule HighlightRepoWeb.RepoController do
         conn
         |> put_status(:ok)
         |> render("repo.json", %{item: repo})
+
       {:error, message} ->
         conn
         |> put_status(:bad_request)

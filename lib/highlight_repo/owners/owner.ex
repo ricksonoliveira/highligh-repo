@@ -1,4 +1,7 @@
 defmodule HighlightRepo.Owners.Owner do
+@moduledoc """
+Owner
+"""
   use Ecto.Schema
   import Ecto.Changeset
 

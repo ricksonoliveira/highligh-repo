@@ -1,4 +1,7 @@
 defmodule HighlightRepo.Repos.GitRepo do
+@moduledoc """
+GitRepo
+"""
   use Ecto.Schema
   import Ecto.Changeset
 

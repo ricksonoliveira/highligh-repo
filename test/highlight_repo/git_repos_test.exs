@@ -1,10 +1,9 @@
 defmodule HighlightRepo.GitReposTest do
   use HighlightRepo.DataCase
 
-  alias HighlightRepo.{Repo, GitRepos, Repos.GitRepo, Owners.Owner}
+  alias HighlightRepo.{GitRepos, Owners.Owner, Repo, Repos.GitRepo}
 
   describe "repos" do
-
     @repo %{
       description: "Elixir Programming Language",
       forks: 2833,
@@ -37,7 +36,9 @@ defmodule HighlightRepo.GitReposTest do
     end
 
     test "fetch_or_create_git_repo_with_owner/3 with valid data creates a git_repo" do
-      assert {:ok, %GitRepo{} = git_repos} = GitRepos.fetch_or_create_git_repo_with_owner(@repo.name, @repo, @owner)
+      assert {:ok, %GitRepo{} = git_repos} =
+               GitRepos.fetch_or_create_git_repo_with_owner(@repo.name, @repo, @owner)
+
       assert git_repos.description == "Elixir Programming Language"
       assert git_repos.name == "elixir"
       assert git_repos.owner.name == "ricksonoliveira"
@@ -45,7 +46,9 @@ defmodule HighlightRepo.GitReposTest do
 
     test "fetch_or_create_git_repo_with_owner/3 with valid data gets a git_repo" do
       {:ok, existing_repo} = git_repos_fixture()
-      {:ok, repo} = GitRepos.fetch_or_create_git_repo_with_owner(existing_repo.name, @repo, @owner)
+
+      {:ok, repo} =
+        GitRepos.fetch_or_create_git_repo_with_owner(existing_repo.name, @repo, @owner)
 
       assert repo.description == "Elixir Programming Language"
       assert repo.name == "elixir"
@@ -53,7 +56,9 @@ defmodule HighlightRepo.GitReposTest do
     end
 
     test "fetch_or_create_git_repo_with_owner/3 with invalid data returns error changeset" do
-      assert {:error, %Ecto.Changeset{}} = GitRepos.fetch_or_create_git_repo_with_owner("", @invalid_attrs, %{})
+      assert {:error, %Ecto.Changeset{}} =
+               GitRepos.fetch_or_create_git_repo_with_owner("", @invalid_attrs, %{})
+
       assert {:error, %Ecto.Changeset{}} = %Owner{} |> Owner.changeset(%{}) |> Repo.insert()
     end
   end

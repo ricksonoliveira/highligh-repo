@@ -1,8 +1,8 @@
 defmodule HighlightRepoWeb.RepoView do
   use HighlightRepoWeb, :view
 
-  def render("repos_info.json",  %{data: items}) do
-      %{data: render_many(items, __MODULE__, "repo.json", as: :item)}
+  def render("repos_info.json", %{data: items}) do
+    %{data: render_many(items, __MODULE__, "repo.json", as: :item)}
   end
 
   def render("repo.json", %{item: item}) do
