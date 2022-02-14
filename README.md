@@ -72,7 +72,7 @@ type: `POST`
 
 ```json
 {
-  data: [
+  "data": [
     {
       "description": "Elixir is a dynamic, functional language designed for building scalable and maintainable applications",
       "forks": 2833,
